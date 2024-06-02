@@ -1,0 +1,1 @@
+Sup guys. Anyone else tired of the half-assed coding blogs doing the bare minimum to get a weird looking Microsoft badge? Same. This isn’t going to be your `paste code here without description` blog. No, we’re going to be building real applications in public. Why? Because I’ve obviously got nothing better to do with my time at the moment.
