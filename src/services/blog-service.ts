@@ -2,21 +2,21 @@ import BlogContent from '@/models/blog.content';
 import { promises as fs } from 'fs';
 
 const getBlogBySlug = async (slug: string) => {
-  const content = await fs.readFile(process.cwd() + `/src/blog-content/${slug}/content.txt`, 'utf8');
-  const preview = await fs.readFile(process.cwd() + `/src/blog-content/${slug}/preview.txt`, 'utf8');
-  const title = await fs.readFile(process.cwd() + `/src/blog-content/${slug}/title.txt`, 'utf8');
+  const content = await fs.readFile(process.cwd() + `/src/blog-content/${slug}/content.md`, 'utf8');
+  const headerImage = await fs.readFile(process.cwd() + `/src/blog-content/${slug}/image.txt`, 'utf8');
+  const title = await fs.readFile(process.cwd() + `/src/blog-content/${slug}/title.md`, 'utf8');
 
   const blogContent: BlogContent = {
     title,
     content,
-    contentPreview: preview,
+    headerImage,
   };
 
   return blogContent;
 };
 
 const getBlogSlugs = () => {
-  return ['about-the-blog'];
+  return ['how-to-make-a-rest-api', 'about-the-blog'];
 };
 
 const BlogService = {

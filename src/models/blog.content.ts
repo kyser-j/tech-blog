@@ -1,6 +1,6 @@
 interface BlogContent {
   content: string;
-  contentPreview: string;
+  headerImage: string;
   title: string;
 }
 

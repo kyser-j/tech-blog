@@ -10,10 +10,10 @@ const TopNav = () => {
       </div>
       <div>
         <ul className='flex gap-4'>
-          <li className='px-2 py-1 hover:bg-red-100 rounded hover:cursor-pointer'>
+          <li className='px-2 py-1 list-none hover:bg-red-100 rounded hover:cursor-pointer'>
             <Link href='/about'>About</Link>
           </li>
-          <li className='px-2 py-1 hover:bg-red-100 rounded hover:cursor-pointer'>
+          <li className='px-2 py-1 list-none hover:bg-red-100 rounded hover:cursor-pointer'>
             <Link href='/contact'>Contact</Link>
           </li>
         </ul>

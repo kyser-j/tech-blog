@@ -1,18 +1,15 @@
 import BlogPreview from '@/components/blogs/blog-preview';
 import BlogService from '@/services/blog-service';
-import Link from 'next/link';
 
 const HomePage = () => {
   const blogSlugs = BlogService.getBlogSlugs();
 
   return (
-    <>
+    <div className='flex flex-col'>
       {blogSlugs.map((slug) => (
-        <Link href={slug} key={slug}>
-          <BlogPreview blogSlug={slug} />
-        </Link>
+        <BlogPreview blogSlug={slug} key={slug} />
       ))}
-    </>
+    </div>
   );
 };
 

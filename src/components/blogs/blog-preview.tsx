@@ -1,4 +1,6 @@
 import BlogService from '@/services/blog-service';
+import Image from 'next/image';
+import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 
 interface Props {
@@ -9,12 +11,12 @@ const BlogPreview = async ({ blogSlug }: Props) => {
   const blogContent = await BlogService.getBlogBySlug(blogSlug);
 
   return (
-    <div className='flex flex-col items-center border-b border-b-slate-200 py-8'>
-      <div className='hover:shadow p-10 rounded'>
+    <Link href={blogSlug}>
+      <div className='hover:rounded flex items-center gap-8 px-20 py-10 border-b border-b-stone-300 hover:shadow'>
+        <Image alt='image' src={`/images/${blogContent.headerImage}`} width={200} height={200} />
         <ReactMarkdown>{blogContent.title}</ReactMarkdown>
-        <ReactMarkdown>{blogContent.contentPreview}</ReactMarkdown>
       </div>
-    </div>
+    </Link>
   );
 };
 
