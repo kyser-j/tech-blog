@@ -2,21 +2,23 @@ import Link from 'next/link';
 
 const TopNav = () => {
   return (
-    <nav className='flex justify-between items-center px-4 py-4 shadow bg-white'>
+    <nav className='flex justify-between items-center px-4 py-2 shadow bg-white'>
       <div>
-        <Link href='/'>
+        <Link href='/' className='text-slate-800 hover:no-underline'>
           <span className='text-xl font-semibold'>Wayback Software Blog</span>
         </Link>
       </div>
-      <div>
-        <ul className='flex gap-4'>
-          <li className='px-2 py-1 list-none hover:bg-red-100 rounded hover:cursor-pointer'>
-            <Link href='/about'>About</Link>
-          </li>
-          <li className='px-2 py-1 list-none hover:bg-red-100 rounded hover:cursor-pointer'>
-            <Link href='/contact'>Contact</Link>
-          </li>
-        </ul>
+      <div className='flex gap-12'>
+        <div className='rounded py-2 px-4 hover:cursor-pointer hover:bg-slate-100 group'>
+          <Link href='/about' className='text-slate-800 group-hover:underline'>
+            About
+          </Link>
+        </div>
+        <div className='rounded py-2 px-4 hover:cursor-pointer hover:bg-slate-100 group'>
+          <Link href='/contact' className='text-slate-800 group-hover:underline'>
+            Contact
+          </Link>
+        </div>
       </div>
     </nav>
   );

@@ -1,4 +1,4 @@
-import BlogPreview from '@/components/blogs/blog-preview';
+import { BlogContentPreviewResolver } from '@/blog-content/utils/blog-content-resolver';
 import BlogService from '@/services/blog-service';
 
 const HomePage = () => {
@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className='flex flex-col'>
       {blogSlugs.map((slug) => (
-        <BlogPreview blogSlug={slug} key={slug} />
+        <BlogContentPreviewResolver slug={slug} key={slug} />
       ))}
     </div>
   );

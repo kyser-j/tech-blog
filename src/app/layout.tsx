@@ -14,9 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='bg-stone-100'>
+      <body className='bg-stone-50'>
         <TopNav />
-        <main className='container mx-auto'>{children}</main>
+        {children}
       </body>
     </html>
   );

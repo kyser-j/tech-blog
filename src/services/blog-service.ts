@@ -1,3 +1,4 @@
+import { EnsureMessageDeliveryInDistributedSystemSlug } from '@/blog-content/ensure-message-delivery-event-driven-system/ensure-message-delivery-event-driven-system';
 import BlogContent from '@/models/blog.content';
 import { promises as fs } from 'fs';
 
@@ -16,7 +17,7 @@ const getBlogBySlug = async (slug: string) => {
 };
 
 const getBlogSlugs = () => {
-  return ['how-to-make-a-rest-api', 'about-the-blog'];
+  return [EnsureMessageDeliveryInDistributedSystemSlug];
 };
 
 const BlogService = {

@@ -2,18 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  @apply text-3xl font-bold mt-4;
-}
-
 h2 {
-  @apply text-xl font-semibold;
+  @apply text-2xl font-semibold mt-4;
 }
 
 p {
-  @apply my-4;
+  @apply py-4;
+}
+
+ul {
+  @apply py-4;
 }
 
 li {
-  @apply list-disc list-inside;
+  @apply list-disc list-outside ms-14 pb-2;
+}
+
+img {
+  @apply py-4 mx-auto max-w-4xl;
+}
+
+a {
+  @apply text-blue-400 hover:cursor-pointer hover:underline;
 }
